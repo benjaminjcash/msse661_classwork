@@ -1,0 +1,13 @@
+{
+  "name": "week3",
+  "version": "1.0.0",
+  "description": "Serving our website to a browser and extend our website's capabilities with an API.",
+  "scripts": {
+    "start": "./server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
