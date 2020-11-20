@@ -34,6 +34,10 @@ nav ul li {
     flex-grow: 1;
 }
 
+.logout-container {
+    margin-left: -58px;
+}
+
 main {
     flex: auto;
     background-color: #312F2F;
@@ -41,7 +45,7 @@ main {
     justify-content: center;
 }
 
-.main-content {
+#main-content {
     display: flex;
     flex-direction: column;
     width: 75%;
@@ -54,11 +58,15 @@ main {
     justify-content: center;
 }
 
-#feature-1-container {
+#loading-container {
     background-color: #84DCCF;
 }
 
-#feature-2-container {
+.item-container-0 {
+    background-color: #84DCCF;
+}
+
+.item-container-1 {
     background-color: #A6D9F7;
 }
 

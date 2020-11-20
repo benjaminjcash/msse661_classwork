@@ -13,15 +13,15 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
+            <div class="logout-container">
+                <button onClick="logout()">Logout</button>
+            </div>
         </nav>
     </header>
     <main>
-        <div class="main-content">
-            <div id="feature-1-container" class="content-item">
-                <p>Feature 1</p>
-            </div>
-            <div id="feature-2-container" class="content-item">
-                <p>Feature 2</p>
+        <div id="main-content">
+            <div id="loading-container" class="content-item">
+                <p>Loading...</p>
             </div>
         </div>
     </main>
@@ -29,7 +29,11 @@
         <p>Author: <a href="https://github.com/benjaminjcash">Benjamin Cash</a></p>
     </footer>
   </body>
-  <script src="./src/helpers.service.js"></script>
+  <script src='./src/config.js'></script>
+  <script src='./src/storage.js'></script>
+  <script src="./src/serviceHelpers.js"></script>
   <script src="./src/auth.service.js"></script>
+  <script src="./src/item.service.js"></script>
+  <script src="./src/getItemList.js"></script>
   <script src="./src/app.js"></script>
 </html>

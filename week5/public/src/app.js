@@ -1,4 +1,4 @@
-const login = function(e) {
+const login = (e) => {
     e.preventDefault();
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -18,7 +18,7 @@ const login = function(e) {
     })
 }
 
-const register = function(e) {
+const register = (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -40,4 +40,9 @@ const register = function(e) {
     .catch(function(error) {
         console.log(error);
     })
+}
+
+const logout = (e) => {
+    requestLogout();
+    window.location.href = '/';
 }

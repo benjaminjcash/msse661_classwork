@@ -13,6 +13,9 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
+            <div class="logout-container">
+                <button onClick="logout()">Logout</button>
+            </div>
         </nav>
     </header>
     <main>
@@ -26,7 +29,10 @@
         <p>Author: <a href="https://github.com/benjaminjcash">Benjamin Cash</a></p>
     </footer>
   </body>
-  <script src="./src/helpers.service.js"></script>
+  <script src='./src/config.js'></script>
+  <script src='./src/storage.js'></script>
+  <script src="./src/serviceHelpers.js"></script>
   <script src="./src/auth.service.js"></script>
+  <script src="./src/item.service.js"></script>
   <script src="./src/app.js"></script>
 </html>
