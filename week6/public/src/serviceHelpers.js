@@ -23,3 +23,15 @@ const _post = async (url, data) => {
     });
     return res.json();
 }
+
+const _delete = async(url, itemId) => {
+    console.log(itemId);
+    const res = await fetch(`${url}/${itemId}`, {
+        method: 'DELETE',
+        headers: {
+            Authorization: token,
+            'Content-Type': 'application/json'
+        }
+    });
+    return res.json();
+}

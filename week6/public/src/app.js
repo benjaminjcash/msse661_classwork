@@ -5,7 +5,7 @@ const login = (e) => {
     requestLogin({
         username: username,
         password: password
-    }).then(function(data) {
+    }).then((data) => {
         if(data.success) {
             console.log(data);
             setStorage('access_token', data.access_token);
@@ -17,7 +17,7 @@ const login = (e) => {
             alert(data.error);
         }
     })
-    .catch(function(error) {
+    .catch((error) => {
         console.log(error);
     })
 }
@@ -33,7 +33,7 @@ const register = (e) => {
         email: email,
         username: username,
         password: password
-    }).then(function(data) {
+    }).then((data) => {
         console.log(data);
         if(data.success) {
             alert(data.message);
@@ -42,7 +42,7 @@ const register = (e) => {
             alert(data.error);
         }
     })
-    .catch(function(error) {
+    .catch((error) => {
         console.log(error);
     })
 }
@@ -50,4 +50,10 @@ const register = (e) => {
 const logout = (e) => {
     requestLogout();
     window.location.href = '/';
+}
+
+const deleteItem = (itemId) => {
+    requestDeleteItem(itemId).then((data) => {
+        window.location.href = '/home.html';
+    })
 }

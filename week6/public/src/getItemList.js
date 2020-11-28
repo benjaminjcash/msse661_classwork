@@ -24,7 +24,7 @@
                     <button class="btn btn-secondary modify-button">Modify</button>
                 </div>
                 <div class="col-1">
-                    <button type="submit" class="btn btn-danger delete-button">Delete</button>
+                    <button type="submit" class="btn btn-danger delete-button" onClick="deleteItem('${item._id}')">Delete</button>
                 </div>
             </div>
             `;
