@@ -30,16 +30,15 @@
                 <div class="card" style="width: 100%;">
                     <div class="card-body">
                       <h5 class="card-title">Add Item</h5>
-                      <form>
                         <div class="form-group">
-                          <label for="name-input">Name</label>
-                          <input class="form-control" id="name-input">
+                          <label for="name-input-add">Name</label>
+                          <input class="form-control" id="name-input-add">
                         </div>
                         <div class="form-group">
-                          <label for="type-input">Type</label>
-                          <input class="form-control" id="type-input">
+                          <label for="type-input-add">Type</label>
+                          <input class="form-control" id="type-input-add">
                         </div>
-                        <button type="submit" class="btn btn-primary">Add</button>
+                        <button class="btn btn-primary" onClick="addItem(event)">Add</button>
                     </div>
                   </div>
                   <div class="card update-item-card" style="width: 100%;">
@@ -47,14 +46,14 @@
                       <h5 class="card-title">Update Item</h5>
                       <form>
                         <div class="form-group">
-                          <label for="name-input">Name</label>
-                          <input class="form-control" id="name-input">
+                          <label for="name-input-update">Name</label>
+                          <input class="form-control" id="name-input-update">
                         </div>
                         <div class="form-group">
-                          <label for="type-input">Type</label>
-                          <input class="form-control" id="type-input">
+                          <label for="type-input-update">Type</label>
+                          <input class="form-control" id="type-input-update">
                         </div>
-                        <button type="submit" class="btn btn-secondary">Update</button>
+                        <button class="btn btn-secondary">Update</button>
                     </div>
                   </div>
             </div>
@@ -62,13 +61,13 @@
                 <ul id="item-list" class="list-group">
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-3">
                                 <h5>Name</h5>
                             </div>
-                            <div class="col-1">
+                            <div class="col-3">
                                 <h5>Type</h5>
                             </div>
-                            <div class="col-9"></div>
+                            <div class="col-6"></div>
                         </div>
                     </li>
                 </ul>

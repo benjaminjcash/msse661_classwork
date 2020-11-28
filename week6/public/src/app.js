@@ -1,3 +1,6 @@
+
+/** Auth */
+
 const login = (e) => {
     e.preventDefault();
     const username = document.getElementById('usernameLogin').value;
@@ -51,6 +54,29 @@ const logout = (e) => {
     requestLogout();
     window.location.href = '/';
 }
+
+/** Item */
+
+const addItem = (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name-input-add').value;
+    const type = document.getElementById('type-input-add').value;
+    requestAddItem({
+        name: name,
+        type: type
+    }).then((data) => {
+        if(data._id) {
+            alert("item added successfully");
+            window.location.href = '/home.html';
+        } else {
+            alert(data._message);
+        }
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+}
+
 
 const deleteItem = (itemId) => {
     requestDeleteItem(itemId).then((data) => {
