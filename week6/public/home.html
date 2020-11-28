@@ -44,7 +44,6 @@
                   <div class="card update-item-card" style="width: 100%;">
                     <div class="card-body">
                       <h5 class="card-title">Update Item</h5>
-                      <form>
                         <div class="form-group">
                           <label for="name-input-update">Name</label>
                           <input class="form-control" id="name-input-update">
@@ -53,7 +52,8 @@
                           <label for="type-input-update">Type</label>
                           <input class="form-control" id="type-input-update">
                         </div>
-                        <button class="btn btn-secondary">Update</button>
+                        <button id="submit-update-button" class="btn btn-secondary" onClick="updateItem(this.getAttribute('data-id'))">Update</button>
+                        <button id="cancel-update-button" class="btn btn-danger"onClick="cancelModifyItem()">Cancel</button>
                     </div>
                   </div>
             </div>

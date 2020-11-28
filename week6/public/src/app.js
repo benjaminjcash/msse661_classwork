@@ -77,9 +77,52 @@ const addItem = (e) => {
     })
 }
 
+const modifyItem = async (itemId) => {
+    const items = await requestGetItems();
+    if(!items?.data?.length > 0) {
+        alert("could not fetch item");
+        return;
+    }
+    let itemToModify;
+    items.data.forEach(itemFromDb => {
+        if(itemFromDb._id == itemId) itemToModify = itemFromDb;
+    });
+    console.log(itemToModify);
+    document.getElementById("name-input-update").value = itemToModify.name;
+    document.getElementById("type-input-update").value = itemToModify.type;
+    const updateButton = document.getElementById("submit-update-button");
+    updateButton.setAttribute('data-id', itemToModify._id);
+}
+
+const cancelModifyItem = () => {
+    document.getElementById("name-input-update").value = '';
+    document.getElementById("type-input-update").value = '';
+    const updateButton = document.getElementById("submit-update-button");
+    updateButton.setAttribute('data-id', '');
+}
+
+const updateItem = (itemId) => {
+    console.log(itemId);
+    const newName = document.getElementById("name-input-update").value;
+    const newType = document.getElementById("type-input-update").value;
+    const newItem = {
+        _id: itemId,
+        name: newName,
+        type: newType
+    }
+    requestUpdateItem(newItem).then((data) => {
+        alert('updated item successfully');
+        window.location.href = '/home.html';
+    }).catch((err) => {
+        alert(err);
+    })
+}
 
 const deleteItem = (itemId) => {
     requestDeleteItem(itemId).then((data) => {
+        alert('deleted item successfully');
         window.location.href = '/home.html';
+    }).catch((err) => {
+        alert(err);
     })
 }

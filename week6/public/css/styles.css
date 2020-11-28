@@ -39,6 +39,10 @@
     float: right;
 }
 
+#cancel-update-button {
+    float: right;
+}
+
 #github-link {
     float: left;
 }

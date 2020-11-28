@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-4"></div>
                 <div class="col-1">
-                    <button class="btn btn-secondary modify-button">Modify</button>
+                    <button class="btn btn-secondary modify-button" onClick="modifyItem('${item._id}')">Modify</button>
                 </div>
                 <div class="col-1">
                     <button type="submit" class="btn btn-danger delete-button" onClick="deleteItem('${item._id}')">Delete</button>
