@@ -13,6 +13,19 @@ class ItemService {
     init() {
         this.render();
     }
+
+    getItems = async () => {
+        try {
+            const data = await itemAPIService.getItems();
+            const itemsFromDb = data.data;
+            if(itemsFromDb?.length > 0) {
+                this.items = itemsFromDb;
+            }
+        }
+        catch(err) {
+            console.error(err);
+        }
+    }
     
     /**
      * Adds an item to the database
@@ -127,8 +140,7 @@ class ItemService {
      */
     render = async () => {
         try {
-            let data = await this.itemApiService.getItems();
-            this.items = data.data;
+            await this.getItems();
             const spinner = document.getElementById('spinner');
             spinner.classList.add("spinner-hidden");
             const fragment = document.createDocumentFragment();
