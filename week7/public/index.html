@@ -25,7 +25,7 @@
                                 </div>
             
                                 <div class="input-group mb-3">
-                                    <button type="button" class="btn btn-primary" onClick="login(event)">Login</button>
+                                    <button type="button" class="btn btn-primary" onClick="authService._login(event)">Login</button>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                 </div>
             
                                 <div class="input-group mb-3">
-                                    <button type="button" class="btn btn-primary" onClick="register(event)">Register</button>
+                                    <button type="button" class="btn btn-primary" onClick="authService._register(event)">Register</button>
                                 </div>
                             </div>
                         </div>
@@ -61,6 +61,6 @@
     <script src='./lib/config.js'></script>
     <script src='./lib/storage.js'></script>
     <script src="./lib/serviceHelpers.js"></script>
+    <script src="./auth/auth.api.service.js"></script>
     <script src="./auth/auth.service.js"></script>
-    <script src="./auth/auth.controller.js"></script>
 </html>

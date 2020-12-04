@@ -19,7 +19,7 @@
                     <a class="nav-link" href="about.html"><button type="button" class="btn btn-secondary">About</button></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href=""><button type="button" class="btn btn-danger" onClick="logout()">Logout</button></a>
+                    <a class="nav-link" href=""><button type="button" class="btn btn-danger" onClick="authService._logout(event)">Logout</button></a>
                 </li>
             </ul>
         </div>
@@ -35,7 +35,7 @@
 <script src='./lib/config.js'></script>
 <script src='./lib/storage.js'></script>
 <script src="./lib/serviceHelpers.js"></script>
+<script src="./auth/auth.api.service.js"></script>
 <script src="./auth/auth.service.js"></script>
-<script src="./auth/auth.controller.js"></script>
-<script src="./lib/route-guard.js"></script>
+<script src="./lib/auth.guard.js"></script>
 </html>

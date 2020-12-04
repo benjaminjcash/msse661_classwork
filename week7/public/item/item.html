@@ -19,7 +19,7 @@
                     <a class="nav-link" href="../about.html"><button type="button" class="btn btn-secondary">About</button></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href=""><button type="button" class="btn btn-danger" onClick="logout()">Logout</button></a>
+                    <a class="nav-link" href=""><button type="button" class="btn btn-danger" onClick="authService._logout(event)">Logout</button></a>
                 </li>
             </ul>
             <div id="spinner" class="spinner-border text-primary" role="status"></div>
@@ -38,7 +38,7 @@
                           <label for="type-input-add">Type</label>
                           <input class="form-control" id="type-input-add">
                         </div>
-                        <button class="btn btn-primary" onClick="addItem(event)">Add</button>
+                        <button class="btn btn-primary" onClick="itemService._addItem(event)">Add</button>
                     </div>
                   </div>
                   <div id="update-item" class="card update-item-card update-item-hidden" style="width: 100%;">
@@ -52,8 +52,8 @@
                           <label for="type-input-update">Type</label>
                           <input class="form-control" id="type-input-update">
                         </div>
-                        <button id="submit-update-button" class="btn btn-secondary" onClick="updateItem(this.getAttribute('data-id'))">Update</button>
-                        <button id="cancel-update-button" class="btn btn-danger"onClick="cancelModifyItem()">Cancel</button>
+                        <button id="submit-update-button" class="btn btn-secondary" onClick="itemService._updateItem(this.getAttribute('data-id'))">Update</button>
+                        <button id="cancel-update-button" class="btn btn-danger"onClick="itemService._cancelModifyItem()">Cancel</button>
                     </div>
                   </div>
             </div>
@@ -83,10 +83,10 @@
 <script src='../lib/config.js'></script>
 <script src='../lib/storage.js'></script>
 <script src="../lib/serviceHelpers.js"></script>
+<script src="../auth/auth.api.service.js"></script>
 <script src="../auth/auth.service.js"></script>
-<script src="../auth/auth.controller.js"></script>
+<script src="./item.api.service.js"></script>
 <script src="./item.service.js"></script>
-<script src="./ItemList.js"></script>
-<script src="./item.controller.js"></script>
-<script src='../lib/route-guard.js'></script>
+<script src="../lib/app.js"></script>
+<script src='../lib/auth.guard.js'></script>
 </html>
