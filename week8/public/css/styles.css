@@ -1,0 +1,143 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.auth-page {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.auth-container-1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+.auth-container-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    /*whatever width you want*/
+}
+
+.login-card {
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.register-card {
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.profile-page {
+    display: table;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.profile-container-1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+.profile-container-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    /*whatever width you want*/
+}
+
+.profile-card {
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+#user-name-container {
+    height: 100%;
+    float: right;
+}
+
+.spinner-hidden {
+    display: none;
+}
+
+.update-item-card {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.update-item-hidden {
+    display: none;
+}
+
+.add-item-card {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+#item-list {
+    width: 100%;
+}
+
+.list-group {
+    align-self: center;
+    margin-top: 10px;
+}
+
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.list-group-item p {
+    font-weight: bold;
+}
+
+.name-badge {
+    font-size: 25px;
+}
+
+.type-badge {
+    font-size: 20px;
+}
+
+.modify-button {
+    float: right;
+}
+
+.delete-button {
+    float: right;
+}
+
+#cancel-update-button {
+    float: right;
+}
+
+#github-link {
+    float: left;
+}
+
+.author-container {
+    justify-content: left;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    display: flex;
+}
